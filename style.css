@@ -3,56 +3,81 @@
     padding: 0;
 }
 
-#titulo {
-    font-family: sans-serif;
-    color: #380B61;
-    margin-left: 7%;
-}
-
-#subtitulo{
-    font-family: sans-serif;
-    color: #380B61;
-    margin-left: 10%;
-}
-
-fieldset {
-    border: 0;
-}
-
 body {
     background-color: #F0F8FF;
     font-family: sans-serif;
     font-size: 1em;
     color: #59429d;
-    margin-left: 36%;
-    margin-top: 2%;
+}
+
+#titulo, #subtitulo {
+    font-family: sans-serif;
+    color: #380B61;
+    text-align: center;
+}
+
+#subtitulo {
+    padding-bottom: 4rem;
+}
+
+form {
+    margin: auto;
+    width: 90%;
+}
+
+.first-group {
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo input {
+    width: 80%;
+}
+
+fieldset, .second-group, .third-group{
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.second-group {
+    gap: .5rem;
+    padding-bottom: 1rem;
+}
+
+.third-group {
+    padding-bottom: 2rem;
+    gap: 1rem;
+}
+
+#senioridade {
+    width: 50%;
+    padding-block: .5rem;
+}
+
+#check {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     justify-content: center;
 }
 
-input, select, textarea, button{
+.forth-group {
+    padding-bottom: 3rem;
+}
+
+input, select, button{
     border-radius: 5px;
 }
 
-.campo{
-    margin-bottom: 1em;
-}
-
-.campo label{
-    margin-bottom: 0.2em;
-    color: #59429d;
-    display: block;
-}
-
-fieldset.grupo .campo{
-    float:left;
-    margin-right: 1em;
-}
-
-.campo input[type="text"], .campo input[type"email"], .campo select, .campo textarea {
-    padding: 0.2em;
-    border: 1px solid #59429d; 
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    display: block;
+#experiencia {
+    width: 80%;
+    border-radius: 5px;
 }
 
 .campo select option{
@@ -63,20 +88,22 @@ fieldset.grupo .campo{
 background: #E0E0F8;
 }
 
-.botao{
+.fifth-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.botao {
     font-size: 1.2em;
     background: #59429d;
     border: 0;
-    margin-bottom: 1em;
+    margin-block: 1em;
     color: #ffffff;
     padding: 0.2em 0.6em;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    position: absolute;
-    top: 95%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    margin-left: 30vw;
 }
 
 .botao:hover{
@@ -85,6 +112,17 @@ background: #E0E0F8;
     text-shadow: none;
 }
 
-#check{
-    display: inline-block;
+@media screen and (min-width: 1200px) {
+    .campo input {
+        width: 60%;
+        padding-block: .5rem;
+    }
+
+    #experiencia {
+        width: 60%;
+    }
+
+    .botao {
+        margin-left: 40vw;
+    }
 }
