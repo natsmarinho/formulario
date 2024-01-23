@@ -18,11 +18,13 @@
         <label for="nome">
             <strong>Nome completo</strong>
         </label>
-        <input type="text" name="nome" id="nome" required>
+        <input type="text" name="nome" id="nome" oninput="validateName()">
+        <p class="error-msg"></p>
     </div>
     <div class="campo"> 
         <label for="email"> <strong> Email </strong> </label>
-        <input type="email" name="email" id="email" required>
+        <input type="email" name="email" id="email" oninput=validateEmail()>
+        <p class="error-msg"></p>
     </div>
 </fieldset>
 
@@ -31,7 +33,7 @@
     <strong> De qual lado da aplicação você desenvolve? </strong>
 </label>
 <label>
-     <input type="radio" name="devweb" value="frontend" checked>Front-end
+     <input type="radio" name="devweb" value="frontend" checked> Front-end
 </label>
 
 <label> 
@@ -74,14 +76,14 @@
 </fieldset>
 
 <div class="fifth-group">
- <label>
-    <strong>  Conte um pouco sobre sua experiência </strong> 
-</label>
- <textarea rows="20" id="experiencia" name="experiencia"></textarea>
-</div>
+        <label><strong>  Conte um pouco sobre sua experiência </strong> </label>
+        <textarea rows="20" id="experiencia" name="experiencia"></textarea>
+        </div>
 
-<button type="submit" class="botao"> Concluído </button> 
+    <input type="button" class="botao" id="submit" value="Concluído">
 </form>
+
+<script src="./main.js"></script>
 
 </body>
 </html>

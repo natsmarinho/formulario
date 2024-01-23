@@ -39,6 +39,11 @@ form {
     width: 80%;
 }
 
+.error-msg {
+    color: red;
+    margin-top: .5rem;
+}
+
 fieldset, .second-group, .third-group{
     border: none;
     display: flex;
